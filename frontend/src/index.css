@@ -1,9 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-primary: #3b82f6;
+  /* Custom Colors */
+  --color-brand-primary: #000000;
   --color-brand-secondary: #10b981;
   --color-brand-accent: #f59e0b;
-  --color-custom-purple: #8b5cf6;
-  --color-custom-pink: #ec4899;
+  --color-ds-white-100: #eff1e6;
+  --color-ds-blue: #a2bdf4;
+  --color-ds-purple: #8b5cf6;
+  --color-ds-pink: #ec4899;
+  --color-ds-pink-100: #f5a1c3;
+  --color-ds-dark: #1f2937;
+  --color-ds-light: #f9fafb;
+  --color-ds-gray: #6b7280;
+  --color-ds-gray-100: #9d9d9d;
+  --color-ds-gray-200: #979797;
+
+  /* Custom Spacing */
+  --spacing-ds-2: 2px;
+  --spacing-ds-4: 4px;
+  --spacing-ds-6: 6px;
+  --spacing-ds-8: 8px;
+  --spacing-ds-10: 10px;
+  --spacing-ds-12: 12px;
+  --spacing-ds-14: 14px;
+  --spacing-ds-16: 16px;
+  --spacing-ds-18: 18px;
+  --spacing-ds-20: 20px;
+  --spacing-ds-24: 24px;
+  --spacing-ds-28: 28px;
+  --spacing-ds-32: 32px;
+  --spacing-ds-36: 36px;
+  --spacing-ds-40: 40px;
+  --spacing-ds-44: 44px;
+  --spacing-ds-48: 48px;
+  --spacing-ds-56: 56px;
+  --spacing-ds-64: 64px;
+  --spacing-ds-72: 72px;
+  --spacing-ds-80: 80px;
+  --spacing-ds-96: 96px;
+  --spacing-ds-128: 128px;
+
+  /* Custom Border Radius */
+  --radius-ds-2: 2px;
+  --radius-ds-4: 4px;
+  --radius-ds-6: 6px;
+  --radius-ds-8: 8px;
+  --radius-ds-10: 10px;
+  --radius-ds-12: 12px;
+  --radius-ds-16: 16px;
+  --radius-ds-20: 20px;
+  --radius-ds-24: 24px;
+  --radius-ds-100: 100px;
+
+  /* Custom Shadows */
+  --shadow-ds-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-ds-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-ds-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-ds-brand: 0 4px 14px 0 rgba(59, 130, 246, 0.25);
+}
+
+body {
+  @apply bg-ds-white-100;
 }

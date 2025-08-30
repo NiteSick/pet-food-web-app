@@ -15,6 +15,8 @@
   --color-ds-gray: #6b7280;
   --color-ds-gray-100: #9d9d9d;
   --color-ds-gray-200: #979797;
+  --color-ds-green: #2b885c;
+  --color-ds-yellow: #fad062;
 
   /* Custom Spacing */
   --spacing-ds-2: 2px;
@@ -58,8 +60,22 @@
   --shadow-ds-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-ds-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-ds-brand: 0 4px 14px 0 rgba(59, 130, 246, 0.25);
+
+  --max-width-1128: 1128px;
+
+  /* fonts */
+  --font-gorditas: "Gorditas", sans-serif;
+  --font-fredoka: "Fredoka", sans-serif;
 }
 
 body {
-  @apply bg-ds-white-100;
+  @apply bg-ds-white-100 font-fredoka;
+}
+
+.container {
+  @apply w-full max-w-1128 mx-auto;
+}
+
+.footer-link {
+  @apply text-white hover:underline;
 }

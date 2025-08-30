@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
-const authHandler = require("../../handlers/authHandler");
+const login = require("../../handlers/authHandler");
 
 router.post(
   "/auth",
@@ -29,7 +29,7 @@ router.post(
       res.status(400).json({ errors: errors.array() });
     }
   },
-  authHandler
+  login
 );
 
 module.exports = router;

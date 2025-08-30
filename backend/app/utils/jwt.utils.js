@@ -19,18 +19,20 @@ const generateRefreshToken = (payload) => {
 
 const verifyAccessToken = (token) => {
   try {
-    return jwt.verify(token, accessTokenSecret);
+    const decoded = jwt.verify(token, accessTokenSecret);
+    return { valid: true, decoded, error: null };
   } catch (error) {
     console.error("Access token verification failed:", error.message);
-    return null;
+    return { valid: false, decoded: null, error: null };
   }
 };
 const verifyRefreshToken = (token) => {
   try {
-    return jwt.verify(token, refreshTokenSecret);
+    const decoded = jwt.verify(token, refreshTokenSecret);
+    return { valid: true, decoded, error: null };
   } catch (error) {
     console.error("Access token verification failed:", error.message);
-    return null;
+    return { valid: false, decoded: null, error: null };
   }
 };
 module.exports = {

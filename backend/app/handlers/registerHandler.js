@@ -1,7 +1,7 @@
 const User = require("../model/User");
 const bcrypt = require("bcrypt");
 require("dotenv").config();
-const registerHandler = async (req, res) => {
+const registerUser = async (req, res) => {
   const { email, password } = req.body;
 
   try {
@@ -21,4 +21,4 @@ const registerHandler = async (req, res) => {
   }
 };
 
-module.exports = registerHandler;
+module.exports = registerUser;

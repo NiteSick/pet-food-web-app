@@ -1,6 +1,6 @@
 const express = require("express");
 const { body, validationResult } = require("express-validator");
-const registerHandler = require("../../handlers/registerHandler");
+const registerUser = require("../../handlers/registerHandler");
 const logger = require("../../../logger");
 const router = express.Router();
 
@@ -30,7 +30,7 @@ router.post(
       res.status(400).json({ errors: errors.array() });
     }
   },
-  registerHandler
+  registerUser
 );
 
 module.exports = router;

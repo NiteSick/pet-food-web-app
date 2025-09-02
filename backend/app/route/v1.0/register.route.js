@@ -5,7 +5,7 @@ const logger = require("../../../logger");
 const router = express.Router();
 
 router.post(
-  "/register",
+  "/v1/register",
   body("email")
     .exists()
     .withMessage("Email is required")

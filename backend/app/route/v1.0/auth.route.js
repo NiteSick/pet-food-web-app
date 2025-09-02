@@ -4,7 +4,7 @@ const { body, validationResult } = require("express-validator");
 const login = require("../../handlers/authHandler");
 
 router.post(
-  "/auth",
+  "/v1/auth",
   body("email")
     .exists()
     .withMessage("Email is required")

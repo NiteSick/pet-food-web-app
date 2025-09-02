@@ -9,17 +9,21 @@ const authRoute = require("./app/route/v1.0/auth.route");
 const verifyJwt = require("./app/middleware/verifyJwt");
 const refreshRoute = require("./app/route/v1.0/refresh.route");
 const logoutRoute = require("./app/route/v1.0/logout.route");
+const productsRoute = require("./app/route/products/v1.0/createProducts.route");
+const getProductsRoute = require("./app/route/products/v1.0/products.route");
 
 app.use(express.json());
 app.use(cookieParser());
 
-app.use("/api/v1", registerRoute);
-app.use("/api/v1", authRoute);
-app.use("/api/v1", refreshRoute);
+app.use("/api/", registerRoute);
+app.use("/api/", authRoute);
+app.use("/api/", refreshRoute);
+app.use("/api/", productsRoute);
+app.use("/api/", getProductsRoute);
 
 app.use(verifyJwt);
 
-app.use("/api/v1", logoutRoute);
+app.use("/api/", logoutRoute);
 
 mongoose
   .connect(`${process.env.MONGO_URI}`)
